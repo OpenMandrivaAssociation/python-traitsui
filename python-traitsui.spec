@@ -16,7 +16,7 @@ BuildArch:	noarch
 Obsoletes:	python-enthought-traits-ui
 Obsoletes:	python-enthought-traitsgui
 Requires:	python-traits >= 4.0.0
-Requires:	python-pyside >= 4.0.0
+Requires:	python-pyface >= 4.0.0
 BuildRequires:	python-setuptools >= 0.6c8
 BuildRequires:	python-sphinx
 
