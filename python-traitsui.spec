@@ -1,7 +1,7 @@
 %define module	traitsui
 %define name	python-%{module}
-%define version 4.0.0
-%define release	%mkrel 2
+%define version 4.0.1
+%define release	%mkrel 1
 
 Summary:	Enthought Tool Suite - traitsui project
 Name:		%{name}
