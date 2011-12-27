@@ -1,6 +1,6 @@
 %define module	traitsui
 %define name	python-%{module}
-%define version 4.0.1
+%define version 4.1.0
 %define release	%mkrel 1
 
 Summary:	Enthought Tool Suite - traitsui project
@@ -10,13 +10,13 @@ Release:	%{release}
 Source0:	http://www.enthought.com/repo/ets/%{module}-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
-Url:		http://code.enthought.com/projects/traits_gui/
+Url:		https://github.com/enthought/traitsui/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
 Obsoletes:	python-enthought-traits-ui
 Obsoletes:	python-enthought-traitsgui
-Requires:	python-traits >= 4.0.0
-Requires:	python-pyface >= 4.0.0
+Requires:	python-traits >= 4.1.0
+Requires:	python-pyface >= 4.1.0
 BuildRequires:	python-setuptools >= 0.6c8
 BuildRequires:	python-sphinx
 
