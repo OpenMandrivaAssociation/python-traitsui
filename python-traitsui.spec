@@ -1,29 +1,19 @@
 %define module	traitsui
-%define name	python-%{module}
-%define version 4.2.0
-%define	rel		1
-%if %mdkversion < 201100
-%define release	%mkrel %{rel}
-%else
-%define	release	%{rel}
-%endif
 
-Summary:	Enthought Tool Suite - traits-capable user interfaces
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Summary:	Enthought Tool Suite - traitsui project
+Name:		python-%{module}
+Version:	4.2.0
+Release:	1
 Source0:	http://www.enthought.com/repo/ets/%{module}-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
 Url:		https://github.com/enthought/traitsui/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch:	noarch
 Obsoletes:	python-enthought-traits-ui
 Obsoletes:	python-enthought-traitsgui
-Requires:	python-traits >= 4.2.0
-Requires:	python-pyface >= 4.2.0
+Requires:	python-traits >= 4.1.0
+Requires:	python-pyface >= 4.1.0
 BuildRequires:	python-setuptools >= 0.6c8
-BuildRequires:	python-setupdocs >= 1.0.5
 BuildRequires:	python-sphinx
 
 %description
@@ -45,16 +35,35 @@ The following GUI backends are supported:
 
 %build
 %__python setup.py build
-%__python setup.py build_docs
+pushd docs
+make html
+popd
 
 %install
-%__rm -rf %{buildroot}
-PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
+PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --record=FILE_LIST
+sed -i 's/.*egg-info$//' FILE_LIST
 
-%clean
-%__rm -rf %{buildroot}
+%files -f FILE_LIST
+%doc *.txt *.rst examples/ docs/build/html
 
-%files 
-%defattr(-,root,root)
-%doc *.txt *.rst examples/ build/docs/html
-%py_sitedir/%{module}*
+
+
+%changelog
+* Tue Dec 27 2011 Lev Givon <lev@mandriva.org> 4.1.0-1
++ Revision: 745663
+- Update to 4.1.0.
+
+* Sun Jul 10 2011 Lev Givon <lev@mandriva.org> 4.0.1-1
++ Revision: 689412
+- Update to 4.0.1.
+
+* Thu Jul 07 2011 Lev Givon <lev@mandriva.org> 4.0.0-2
++ Revision: 689265
+- Rebuild.
+- Fix install dep.
+
+* Thu Jul 07 2011 Lev Givon <lev@mandriva.org> 4.0.0-1
++ Revision: 689188
+- import python-traitsui
+
+
