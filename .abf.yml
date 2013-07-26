@@ -1,2 +1,4 @@
+removed_sources:
+  traitsui-4.2.0.tar.gz: 629717a1206afcea93ea695f0188efc1a0a0775b
 sources:
-  "traitsui-4.2.0.tar.gz": 629717a1206afcea93ea695f0188efc1a0a0775b
+  traitsui-4.3.0.tar.gz: 9893cafbb3963d6bca50229e196f911ca79ad1d9

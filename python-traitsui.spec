@@ -2,9 +2,9 @@
 
 Summary:	Enthought Tool Suite - traitsui project
 Name:		python-%{module}
-Version:	4.2.0
+Version:	4.3.0
 Release:	1
-Source0:	http://www.enthought.com/repo/ets/%{module}-%{version}.tar.gz
+Source0:	https://www.enthought.com/repo/ets/traitsui-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
 Url:		https://github.com/enthought/traitsui/
@@ -65,5 +65,6 @@ sed -i 's/.*egg-info$//' FILE_LIST
 * Thu Jul 07 2011 Lev Givon <lev@mandriva.org> 4.0.0-1
 + Revision: 689188
 - import python-traitsui
+
 
 
