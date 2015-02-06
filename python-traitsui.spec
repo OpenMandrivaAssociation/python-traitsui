@@ -3,7 +3,7 @@
 Summary:	Enthought Tool Suite - traitsui project
 Name:		python-%{module}
 Version:	4.3.0
-Release:	1
+Release:	2
 Source0:	https://www.enthought.com/repo/ets/traitsui-%{version}.tar.gz
 License:	BSD
 Group:		Development/Python
