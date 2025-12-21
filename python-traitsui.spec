@@ -13,6 +13,7 @@ Obsoletes:	python-enthought-traits-ui
 Obsoletes:	python-enthought-traitsgui
 Requires:	python-traits >= 4.1.0
 Requires:	python-pyface >= 4.1.0
+BuildRequires:	make
 BuildRequires:	python-setuptools >= 0.6c8
 BuildRequires:	python-sphinx
 
